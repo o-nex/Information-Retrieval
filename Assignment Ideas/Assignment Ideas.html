@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<!-- saved from url=(0042)https://www.informagus.nl/edu/IR-1920.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Information Retrieval</title>
+    
+    <meta name="author" content="Arjen P. de Vries">
+
+    <!-- New stuff, copied from http://www.w3schools.com/bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--  Use newer bootstrap? If so, go here:
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+-->
+    <link href="./Assignment Ideas_files/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="./Assignment Ideas_files/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="./Assignment Ideas_files/kbroman.css" rel="stylesheet" type="text/css" media="all">
+    <link href="./Assignment Ideas_files/arjenpdevries.css" rel="stylesheet" type="text/css" media="all">
+
+    <!-- atom & rss feed -->
+    <link href="https://www.informagus.nl/edu/nil" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="https://www.informagus.nl/edu/nil" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a class="brand" href="https://www.informagus.nl/">Informagi.GitHub.io</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+
+      <div class="content">
+        
+
+<div class="page-header">
+  <h2>Information Retrieval  <small>MSc course NWI-I00041</small></h2>
+</div>
+
+<div class="row-fluid">
+  <div class="span12">
+    <p>Ten ideas for research projects for the practical assignment of the IR course 2019/2020:</p>
+
+<h4 id="assignment-1---multiple-topic-variants">Assignment 1 - Multiple topic variants</h4>
+
+<p>Investigate the effect on retrieval performance of combination of multiple representations of topics.
+For this assignment a system like <a href="https://github.com/castorini/Anserini">anserini</a> would be a good choice.</p>
+
+<p>Background reading: a recent <a href="http://ceur-ws.org/Vol-2167/short3.pdf" title="Shane on query variants">query variations paper</a> by Shane Culpepper; the <a href="https://researchbank.rmit.edu.au/view/rmit:42197" title="UQV100">UQV 100 dataset</a>; classic <a href="https://www.sciencedirect.com/science/article/pii/030645739400057A" title="Belkin on rank fusion">paper on rank fusion</a>.</p>
+
+<p><em>Features: setup your own experiment, some tuning / configuring of an IR system.</em></p>
+
+<p><small>You could choose to focus your work on test collection building instead of experimentation, perhaps mixing assignment 1 and 3.</small></p>
+
+<h4 id="assignment-2---user-study">Assignment 2 - User study</h4>
+
+<p>Evaluate an already existing information retrieval system by doing a user study.</p>
+
+<p>An example study could for example investigate the query logs of users of a retrieval system and investigate how they adjust their queries to find a specific piece of information.</p>
+
+<p>Another example study is investigating search behaviour in voice-only search systems (e.g., Siri and Google now), and see how and when users use these systems for their complex informaition needs.</p>
+
+<p>Background readings: Diane Kelly’s <a href="http://ils.unc.edu/courses/2013_spring/inls509_001/papers/FnTIR-Press-Kelly.pdf" title="Diane Kelly FnTIR">FnTIR on interactive IR evaluation</a>, and <a href="https://www.damianospina.com/wp-content/uploads/2018/01/Trippas_CHIIR_2018.pdf" title="Trippas paper">Trippas paper</a>.</p>
+
+<p><em>Features: setup your own user study to test an hypothesis. Limited programming, primarily for analyzing collected data (could be just Excel).</em></p>
+
+<h4 id="assignment-3---search-in-personal-web-archives">Assignment 3 - Search in Personal Web Archives</h4>
+
+<p>Evaluate the <a href="https://github.com/webis-de/wasp">WASP</a> system and/or extensions. 
+Install WASP, collect data, and carry out an evaluation of the system.</p>
+
+<p>Background reading: the <a href="http://ceur-ws.org/Vol-2167/paper6.pdf" title="WASP paper">WASP paper</a>, and, optionally, Gijs Hendriksen’s BSc thesis on <a href="https://www.cs.ru.nl/bachelors-theses/2019/Gijs_Hendriksen___4324544___Extending_WASP_providing_context_to_a_personal_web_archive.pdf" title="Gijs Hendriksen&#39;s BSc thesis">extending WASP with context</a> (<a href="https://github.com/gijshendriksen/wasp" title="WASP fork">repo</a>).</p>
+
+<p><em>Features: collect your own data, not too much programming.</em></p>
+
+<h4 id="assignment-4---dbpedia">Assignment 4 - DBPedia</h4>
+
+<p>Carry out an entity retrieval evaluation using the DBPedia Entity V2 collection, for example by making use of the <a href="http://nordlys.cc/">Nordlys</a> toolkit.</p>
+
+<p>Dataset: <a href="http://tiny.cc/dbpedia-entity" title="DBPedia-Entity V2">tiny.cc/dbpedia-entity</a> or <a href="https://iai-group.github.io/DBpedia-Entity/" title="DBPedia-Entity V2: collection">here</a>.</p>
+
+<p>The dataset is described in detail in the <a href="http://hasibi.com/files/sigir2017-dbpedia_entity.pdf" title="DBPedia-Entity V2: short paper">SIGIR 2017 resource paper</a> 
+and presented at SIGIR 2017 using this <a href="http://hasibi.com//files/posters/dbpedia-entity.pdf" title="DBPedia-Entity V2: poster">poster</a>.</p>
+
+<p>If you are not yet familiar with RDF, you may want to glance over the <a href="https://www.w3.org/TR/2014/NOTE-rdf11-primer-20140624/" title="RDF Primer">W3C RDF Primer</a>.</p>
+
+<p>The topic of entity ranking is introduced in lecture 5 of the course.
+Other useful background is given in the <a href="https://www.slideshare.net/krisztianbalog/entity-search-the-last-decade-and-the-next" title="RUSSIR tutorial on Entity Ranking">RUSSIR lecture slides</a> (courtesy Krisztian Balog),
+where you find a brief history of the various resources that have been creaAted in the IR community.</p>
+
+<p><em>Features: some challenge in handling the data. (Limited) prior programming experience is handy.</em></p>
+
+<h4 id="assignment-5---build-your-own-ir-system">Assignment 5 - Build your own IR system</h4>
+
+<p>Build your own information retrieval system and carry out an experiment with it.</p>
+
+<p>Background reading: the <a href="https://ciir.cs.umass.edu/irbook/" title="UMass book">UMass CIIR book</a> is excellent.</p>
+
+<p><em>Features: no better way to learn how things work than by doing it from scratch. Need considerable programming experience.</em></p>
+
+<h4 id="assignment-6---ir-systems-in-different-search-contexts">Assignment 6 - IR systems in different search contexts</h4>
+
+<p>Compare the results / suitability / usefulness / … of a single system (e.g., Google/Bing) in different search contexts.
+For example, compare the effects of searching on a certain device, having GPS available, with/without previous sessions, using different languages, <em>etc.</em></p>
+
+<p>Background reading: Diane Kelly’s <a href="http://ils.unc.edu/courses/2013_spring/inls509_001/papers/FnTIR-Press-Kelly.pdf" title="Diane Kelly FnTIR">FnTIR on interactive IR evaluation</a>.</p>
+
+<p><em>Features: Setup your own user study to test an hypothesis. Limited programming, primarily for analyzing collected data.</em></p>
+
+<h4 id="assignment-7---nlp-for-information-retrieval">Assignment 7 - NLP for Information Retrieval</h4>
+
+<p>Incorporate your favorite NLP  technique for retrieval, for example by using entity linking, query expansion, <em>etc.</em>
+Compare the results against a standard system, for example <a href="https://github.com/castorini/Anserini">anserini</a>.</p>
+
+<p><em>Features: Combine/enrich your knowledge of NLP with Information Retrieval. Some programming knowledge would be nice.</em></p>
+
+<h4 id="assignment-8---focus-on-efficiency">Assignment 8 - Focus on efficiency</h4>
+
+<p>Test an information retrieval system on efficiency and/or scalability aspects.
+Design an experiment and investigate the effects of certain parameter setting, and test what the effect is on the efficiency of the system (when carrying out many queries quickly).</p>
+
+<p>Background reading: checkout some of the references in <a href="http://ceur-ws.org/Vol-2167/keynote3.pdf" title="Shane keynote">Shane Culpepper’s keynote at DESIRES 2018</a>.</p>
+
+<p><em>Features: create understanding of inner workings of retrieval system, carry out a performance measurement.</em></p>
+
+<h4 id="assignment-9---newdog-aka-impress-your-prof">Assignment 9 - NewDog (a.k.a. “impress your prof”)</h4>
+
+<p>Your IR professor has a long standing interest in integrating IR and databases.</p>
+
+<p>Consider the <a href="https://www.chriskamphuis.com/2019/03/06/teaching-an-old-dog-a-new-trick.html" title="OldDog Blogpost">OldDog blogpost</a> and accompanying code as a starting point, also available as an easily replicable <a href="https://osirrc.github.io/osirrc2019/" title="OSIRRC 2019">OSIRRC image</a>.
+OldDog uses MonetDB, a surprisingly complete and reliable analytical database system with extensive SQL support.</p>
+
+<p><a href="https://www.duckdb.org/" title="DuckDB">DuckDB</a> is the newest project by the CWI database kernel hackers and aims to replace SQLLite for analytical workloads.
+If you are an excellent programmer and not afraid of a bit of C++ code, you will create the same setup but using instead of MonetDB,
+and compare their runtime performance differences (if any - and, see also assignment 8).</p>
+
+<p><em>We would be especially interested in experimental work using DuckDB with the Python API.</em></p>
+
+<p>If things go smooth, you succeed in creating NewDog and carry on with elements of assignment 7 using standard python libraries… to score the ultimate grade for this assignment.</p>
+
+<h4 id="assignment-10---measuring-personalization-in-search">Assignment 10 - Measuring personalization in search</h4>
+
+<p>Evaluate the personalization done by well-known existing information retrieval systems. For this project, you could, for instance, measure the impact of personalization on search results (for different queries) or compare the personalization of different search engines. Additionally, the project could focus on evaluating or quantifying the differences (e.g. how do you weigh the relative position of the search results in calculating the differences) or on visualizing personalization or filter bubbles.</p>
+
+<p>Background reading: <a href="https://arxiv.org/pdf/1706.05011.pdf">a study by Hannák et al. (2017)</a> comparing personalization across different search engines. For their experimental design they use constructed user accounts; <a href="https://dl.acm.org/citation.cfm?id=2791039">a study by Salehi, Du and Ashman (2015)</a>, that also uses constructed user accounts, to measure the difference between personalized and non-personalized search results on Google. This study specifically addressed search within the educational context, but other contexts might also be interesting (<em>think about how the context might affect the design of your experiment</em>); <a href="https://dl.acm.org/citation.cfm?id=2732850">a study by Dillahunt, Brooks and Gulati (2015)</a> that uses actual users to measure the impact of personalization. The last study also focused on visualizing the impact of personalization on search results.</p>
+
+<p><em>Features: not too much programming, collecting your own search results data, constructing fake user accounts or doing a study with users, evaluation/quantification of differences between search results, techniques for the visualization of personalization in search.</em></p>
+
+<h4 id="assignment-11---re-ranking-for-diversity-of-search-results">Assignment 11 - Re-ranking for diversity of search results</h4>
+
+<p>With talk about filter bubbles and bias, as well as <a href="https://searchengineland.com/google-search-update-aims-to-show-more-diverse-results-from-different-domain-names-317934">Google recently announcing that they are aiming to show results from more diverse domains</a>, it might be interesting to devote your project on re-ranking search results from existing information retrieval systems to prioritise diversity more. Here, multiple types of diversity are possible (e.g. content diversity, domain diversity, etcetera).</p>
+
+<p>Background reading: <a href="http://www.cs.cmu.edu/afs/.cs.cmu.edu/Web/People/jgc/publication/MMR_DiversityBased_Reranking_SIGIR_1998.pdf">A seminal paper by Carbonell and Goldstein (1998)</a> about promoting diversity/novelty, as a way to combat redundancy. A probabilistic re-ranking method, <a href="http://citeseerx.ist.psu.edu/viewdoc/download?doi=10.1.1.476.5924&amp;rep=rep1&amp;type=pdf">proposed by Huang and Hu</a>, that promotes diversity for biomedical information retrieval. <a href="https://www.sciencedirect.com/science/article/pii/S0950705117300680">A survey article by Kunaver and Požrl (2017)</a> about diversity methods for recommender systems. Though the article focuses on recommender systems, it could still provide some inspiration for techniques that can be applied to information retrieval.</p>
+
+<p><em>Features: some tuning/configuring of an IR system.</em></p>
+
+<h4 id="assignment-x---bring-us-your-own-proposal">Assignment X - Bring us your own proposal</h4>
+
+<p>It would be great if you have a cool idea of your own, we encourage any proposals that do not fall in the scope of the other assignments, but do fall in the scope of the course!</p>
+
+<p><em>Find help on the <a href="https://brightspace.ru.nl/d2l/le/88435/discussions/List" title="Forum">forum</a>, or go back to <a href="https://www.informagus.nl/edu/IR.html">main assignment page</a>.</em></p>
+
+
+  </div>
+</div>
+
+
+      </div>
+      <hr>
+      <footer>
+        <p><small>
+  <!-- start of footer -->
+          The <a href="https://www.ru.nl/datascience/">Data Science section</a> of the <a href="https://www.ru.nl/icis/">Institute for Computing and Information Sciences</a> at <a href="https://www.ru.nl/">Radboud University</a>
+  <!-- end of footer -->
+        </small></p>
+      </footer>
+
+    </div>
+
+    
+  
+
+
+</body></html>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<!-- saved from url=(0043)https://www.informagus.nl/edu/IR-tools.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <title>Information Retrieval Tools</title>
+    
+    <meta name="author" content="Arjen P. de Vries">
+
+    <!-- New stuff, copied from http://www.w3schools.com/bootstrap -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<!--  Use newer bootstrap? If so, go here:
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+-->
+    <link href="./Information Retrieval Tools_files/bootstrap.2.2.2.min.css" rel="stylesheet">
+    <link href="./Information Retrieval Tools_files/style.css" rel="stylesheet" type="text/css" media="all">
+    <link href="./Information Retrieval Tools_files/kbroman.css" rel="stylesheet" type="text/css" media="all">
+    <link href="./Information Retrieval Tools_files/arjenpdevries.css" rel="stylesheet" type="text/css" media="all">
+
+    <!-- atom & rss feed -->
+    <link href="https://www.informagus.nl/edu/nil" type="application/atom+xml" rel="alternate" title="Sitewide ATOM Feed">
+    <link href="https://www.informagus.nl/edu/nil" type="application/rss+xml" rel="alternate" title="Sitewide RSS Feed">
+
+  </head>
+
+  <body>
+    <div class="navbar">
+      <div class="navbar-inner">
+        <div class="container-narrow">
+          <a class="brand" href="https://www.informagus.nl/">Informagi.GitHub.io</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="container-narrow">
+
+      <div class="content">
+        
+
+<div class="page-header">
+  <h2>Information Retrieval Tools  <small>Information Retrieval MSc course NWI-I00041-2017-KW1-V</small></h2>
+</div>
+
+<div class="row-fluid">
+  <div class="span12">
+    <h3 id="introduction">Introduction</h3>
+
+<p>Many different types of retrieval technologies are freely available online. I list a few here, but keep in mind that this is not meant to be an exhaustive list,
+and you are free to choose what solutions to mix and match to achieve your practical assignment project goals.</p>
+
+<h3 id="open-source-ir-tools">Open source IR tools</h3>
+
+<p>Elastic and SOLR are widely used open source systems that provide information retrieval functionalities (and a lot more - in practice, a common application of these two is more as an easy-to-deply and scalable JSON document store than as a retrieval system). Both are layers on top of Lucene, which provides the indexing and retrieval functionalities.</p>
+
+<p>If you want to use Lucene in your work, I recommend to take a look at the <a href="https://liarr2017.github.io/" title="LIARR">LIARR workshop material</a> 
+(repository from the Lucene for Information Access and Retrieval Research workshop held at SIGIR 2017).</p>
+
+<p>University of Waterloo’s <a href="https://github.com/castorini/Anserini" title="Anserini">Anserini</a> (for Lucene) and Queensland University of Technology’s <a href="https://github.com/ielab/elastic4IR" title="Elastic4IR">Elastic4IR</a> seem good starting points.</p>
+
+<h3 id="research-systems">Research systems</h3>
+
+<p>Many research systems have been developed throughout the years, where a mature project like Indri has been known to run in production at many different organisations.
+A good starting point is to investigate the systems that took part in the <a href="https://github.com/lintool/IR-Reproducibility" title="IR Reproducibility Workshop">IR Reproducibility</a> workshop, as these are likely to work correctly and be reasonably easy to install.</p>
+
+<p>A new kid on the block is <a href="http://nordlys.cc/" title="Nordlys">Nordlys</a>, which is especially targeting entity retrieval tasks, but has not been tested as thoroughly as the alternatives mentioned before.
+The team behind <em>Nordlys</em> recommends to checkout the following resources:</p>
+<ul>
+  <li><a href="https://github.com/iai-group/nordlys/blob/master/nordlys/core/retrieval/elastic.py" title="Nordlys indexer in Elastic">elastic.py</a>: this part of the code talks to Elastic, performs indexing, search, and gets all raw statistics from index;</li>
+  <li><a href="https://github.com/iai-group/nordlys/blob/master/nordlys/core/retrieval/scorer.py" title="Nordlys scorer">scorer.py</a>: computes statistics for various retrieval models (LM, MLM, and PRMS);</li>
+  <li>Nordlys <a href="http://nordlys.readthedocs.io/en/latest/er.html" title="Nordlys documentation baselines">documentation related to the implementation of the baselines</a>.</li>
+</ul>
+
+<p>They also provide a <a href="http://nordlys.readthedocs.io/en/latest/restful_api.html" title="Nordlys REST API">REST API</a> that you might consider to use instead of building an index yourself.
+E.g., use <a href="http://api.nordlys.cc/er?q=keith+van+rijsbergen&amp;1st_num_docs=100&amp;model=lm" title="Example query"><code class="highlighter-rouge">http://api.nordlys.cc/er?q=keith+van+rijsbergen&amp;1st_num_docs=100&amp;model=lm</code></a> to find 
+entities related to “Keith van Rijsbergen” using language modelling.</p>
+
+<h3 id="osirrc-2019">OSIRRC 2019</h3>
+
+<p>The <a href="https://osirrc.github.io/osirrc2019/">Open-Source IR Replicability Challenge</a> (OSIRRC 2019) organized as a workshop at SIGIR 2019 has created an easy-to-(re-)use experimental IR research framework.</p>
+
+<p>The <a href="https://github.com/osirrc/osirrc2019-library/">OSIRRC 2019 Image Library repository</a> catalogs the images that have been submitted to the OSIRRC 2019. The time investment to learn to use this catalog can pay off very well, as it gives you immediate access to a wide variety of systems that all have been demonstrated capable of running standard IR test collections.</p>
+
+<h3 id="roll-your-own">Roll your own</h3>
+
+<p>An alternative is to develop the tools you need to process the data yourself. The advantage is complete control, a disadvantage that it may turn out a little harder than expected… 
+the learning experience will be hard to beat!</p>
+
+<h3 id="see-also">See also</h3>
+
+<p>Go to the <a href="http://tiny.cc/dbpedia-entity" title="DBPedia-Entity V2">DBPedia-Entity V2 test collection</a> web resources.</p>
+
+<p>Return to the <a href="https://www.informagus.nl/edu/IR.html">Practical Assignment page</a>.</p>
+
+
+  </div>
+</div>
+
+
+      </div>
+      <hr>
+      <footer>
+        <p><small>
+  <!-- start of footer -->
+          The <a href="https://www.ru.nl/datascience/">Data Science section</a> of the <a href="https://www.ru.nl/icis/">Institute for Computing and Information Sciences</a> at <a href="https://www.ru.nl/">Radboud University</a>
+  <!-- end of footer -->
+        </small></p>
+      </footer>
+
+    </div>
+
+    
+  
+
+
+</body></html>
